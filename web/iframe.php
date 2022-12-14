@@ -1,4 +1,6 @@
 <?php
+use function rosasurfer\strCompareI;
+
 // iframe.php (api)
 
 ob_start();
@@ -21,11 +23,13 @@ api (iframe.php)
 </html>
 
 <?php
-function _isSecure() {
+function _isSecure() :bool
+{
     return !empty($_SERVER['HTTPS']) && !strCompareI($_SERVER['HTTPS'], 'off');
 }
 
-function _getHostname() {
+function _getHostname(): string
+{
     if (!empty($_SERVER['HTTP_HOST'])) {
         $httpHost = strtolower(trim($_SERVER['HTTP_HOST']));    // nginx doesn't set $_SERVER[SERVER_NAME]
         if (strlen($httpHost))                                  // automatically to $_SERVER[HTTP_HOST]
