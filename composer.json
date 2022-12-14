@@ -1,0 +1,26 @@
+{
+    "name":        "rosasurfer/cookie-test",
+    "description": "cookie-test",
+    "type":        "project",
+    "license":     "WTFPL",
+    "authors": [{
+        "name":  "Peter Walther",
+        "email": "cookie-test@rosasurfer.com"
+    }],
+    "config": {
+        "optimize-autoloader": true
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/rosasurfer/ministruts" }
+    ],
+    "require": {
+        "php":                   ">=7.4",
+        "rosasurfer/ministruts": "^0.10"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.6"
+    },
+    "autoload": {
+        "classmap": ["app/"]
+    }
+}
