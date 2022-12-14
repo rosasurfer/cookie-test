@@ -1,4 +1,6 @@
 <?php
+use function rosasurfer\strStartsWith;
+
 ob_start();
 
 /** @var rosasurfer\Application $app */
