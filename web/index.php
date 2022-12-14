@@ -16,7 +16,7 @@ function _getHostname(): string
 
 $host = _getHostname();
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
    <title>index (eon)</title>
@@ -30,6 +30,7 @@ EON (index.php)
 <br>
 <br>
 <br>
+
 <iframe style="clear:both" src="https://<?=strStartsWith($host, 'local.') ? 'local.':''?>api.rosasurfer.com/iframe.php"></iframe>
 
 </body>
