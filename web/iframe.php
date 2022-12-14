@@ -1,28 +1,11 @@
 <?php
 use function rosasurfer\strCompareI;
 
-// iframe.php (api)
-
 ob_start();
 
 /** @var rosasurfer\Application $app */
 $app = require(__DIR__.'/../app/init.php');
-?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-   <title>iframe (api)</title>
-</head>
 
-
-<body>
-
-api (iframe.php)
-
-</body>
-</html>
-
-<?php
 function _isSecure() :bool
 {
     return !empty($_SERVER['HTTPS']) && !strCompareI($_SERVER['HTTPS'], 'off');
@@ -48,4 +31,20 @@ $hostUrl = $protocol.'://'.$host.$port;
 header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Origin: '.$hostUrl);
 
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+   <title>iframe (api)</title>
+</head>
+
+
+<body>
+
+api (iframe.php)
+
+</body>
+</html>
+
+<?php
 ob_get_level() && ob_flush();
